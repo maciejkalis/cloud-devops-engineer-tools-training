@@ -1,2 +1,5 @@
-# cloud-devops-engineer-tools-training
-Training repository initiated to practise tools used during Cloud/DevOps tasks
+# Cloud/DevOps Engineer Training
+
+## Description
+
+A training repository created to practice the tools necessary to effectively perform work as a Cloud Engineer or DevOps Engineer.
