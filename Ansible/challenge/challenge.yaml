@@ -1,0 +1,14 @@
+---
+  - name: "An another playbook written to test reachability and to check details of the files contained in the directory."
+    hosts: localhost
+
+    tasks:
+
+      - name: "test reachability"
+        ping:
+
+      - name: "display details of the files contained in the given directory."
+        find:
+          file_type: file
+          patterns: "*.txt"
+          paths: "~/Developer/cloud-devops-engineer-training/Ansible/challenge"
