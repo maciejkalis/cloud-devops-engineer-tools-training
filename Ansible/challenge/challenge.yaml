@@ -1,5 +1,5 @@
 ---
-  - name: "An another playbook written to test reachability and to check details of the files contained in the directory."
+  - name: "test reachability & check details of files in directory"
     hosts: localhost
 
     tasks:
@@ -7,7 +7,7 @@
       - name: "test reachability"
         ping:
 
-      - name: "display details of the files contained in the given directory."
+      - name: "check details"
         find:
           file_type: file
           patterns: "*.txt"
