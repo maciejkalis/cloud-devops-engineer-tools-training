@@ -1,2 +1,3 @@
 ---
 # vars file for testrole1
+myvar: THIS IS A VALUE FROM VARS IN THE ROLE!

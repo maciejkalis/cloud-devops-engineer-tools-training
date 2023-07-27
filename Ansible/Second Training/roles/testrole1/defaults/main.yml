@@ -1,2 +1,4 @@
 ---
 # defaults file for testrole1
+myvar: THIS IS THE DEFAULT FROM DEFAULTS!
+webserver_message: THIS IS A DEFAULT MESSAGE!
