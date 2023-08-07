@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    environment {
+        MAX_SIZE = 10
+        MIN_SIZE = 1
+    }
+    stages {
+        stage('Default Scale') {
+            steps {
+                echo "MAX_SIZE = ${env.MAX_SIZE}"
+                echo "MIN_SIZE = ${env.MIN_SIZE}"
+            }
+        }
+        stage('Scale by 10x') {
+            environment {
+                MAX_SIZE = 100
+                MIN_SIZE = 10
+            }
+            steps {
+                echo "MAX_SIZE = ${env.MAX_SIZE}"
+                echo "MIN_SIZE = ${env.MIN_SIZE}"
+            }
+        }
+    }
+}
