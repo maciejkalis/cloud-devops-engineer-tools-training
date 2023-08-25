@@ -3,7 +3,7 @@ pipeline {
     environment {
       // moving the cache to the workspace might speed up
       // the build stage.  maybe use ${env.WORKSPACE}/.build_cache?
-      GOCACHE = "/tmp"
+      GOCACHE = "${env.WORKSPACE}/.build_cache"
     }
     options {
         buildDiscarder(logRotator(daysToKeepStr: '10', numToKeepStr: '10'))
