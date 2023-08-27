@@ -42,13 +42,15 @@ pipeline {
     post {
         always {
             echo "Collecting jUnit test results..."
-            junit allowEmptyResults: true, testResults: '**/TEST-com.learningjenkins.AppTest.xml'
+            junit allowEmptyResults: true,
+                testResults: '**/TEST-com.learningjenkins.AppTest.xml'
 
             echo "Archiving the JAR file..."
             archiveArtifacts allowEmptyArchive: true,
-            artifacts: '**/hello-1.0-SNAPSHOT.jar',
-            followSymlinks: false,
-            onlyIfSuccessful: true
+                artifacts: '**/hello-1.0-SNAPSHOT.jar',
+                fingerprint: true,
+                followSymlinks: false,
+                onlyIfSuccessful: true
         }
     }
 }
