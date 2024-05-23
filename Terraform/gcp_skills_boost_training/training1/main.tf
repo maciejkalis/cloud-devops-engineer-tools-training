@@ -8,6 +8,7 @@ resource "google_compute_network" "vpc_network" {
   mtu                     = 1460
 }
 
+# [Adding firewall rule]
 resource "google_compute_firewall" "rules" {
   project = var.project_id
   name    = "my-firewall-rule"
