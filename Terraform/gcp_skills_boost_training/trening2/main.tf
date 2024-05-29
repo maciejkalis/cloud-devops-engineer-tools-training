@@ -13,9 +13,10 @@ provider "google" {
 
 resource "google_compute_instance" "my-instance" {
   count        = 2
-  
+
   name         = "test"
   machine_type = "e2-micro"
+  
   network_interface {
     network = "default"
   }
